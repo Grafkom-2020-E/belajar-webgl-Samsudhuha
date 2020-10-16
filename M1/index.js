@@ -64,8 +64,9 @@ function main() {
     // Mewarnai background
     gl.clearColor(0.0, 0.0, 0.0, 1.0);
     gl.clear(gl.COLOR_BUFFER_BIT);
+    gl.viewport(100, 0, canvas.height, canvas.height);
 
-    var primitive = gl.TRIANGLE_FAN;
+    var primitive = gl.TRIANGLE_STRIP;
     var offset = 0;
     var nVertex = 4;
     gl.drawArrays(primitive, offset, nVertex);
